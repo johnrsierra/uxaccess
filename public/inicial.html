@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>SCHOOGLE.BUS</title>
+    <title></title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
   <body role="document">
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">SCHOOGLE.BUS</a>
+          <a class="navbar-brand" href="index.html"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -63,7 +63,8 @@
       </div>
 	  
 	  <div style="text-align: center;">
-	  <iframe src="https://www.google.com/maps/embed?pb=!1m25!1m12!1m3!1d994.0411926716646!2d-74.02672872510216!3d4.741412986276454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m10!1i0!3e0!4m3!3m2!1d4.7409251!2d-74.02549599999999!4m3!3m2!1d4.7423391!2d-74.0270276!5e0!3m2!1ses!2ses!4v1426301891315" width="300" height="300" frameborder="0" style="border:0"></iframe>
+	  
+		<img id="zoom_01" src="./img/sm-mapa.png" data-zoom-image="./img/lg-mapa.png">
 
 
 
@@ -101,5 +102,16 @@
     <script src="./js/jquery.storageapi.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
+	
+	<script src="./js/jquery.elevatezoom.js"></script>
+	
+	<script>
+		$("#zoom_01").elevateZoom({
+			zoomType: "inner",
+			cursor: "crosshair",
+			zoomWindowFadeIn: 500,
+			zoomWindowFadeOut: 750
+	   }); 
+	</script>
   </body>
 </html>
