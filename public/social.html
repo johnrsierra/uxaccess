@@ -1810,6 +1810,36 @@ tasFrHa1q10tYLWrXe1qVwtY7WpXu9p1Juv/HwCf4lGIeNm3hQAAAABJRU5ErkJggg==" alt="" wid
 </div>
 
 
+<div class="modal fade" id="imagemodalTweet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">¿Qu&eacute; est&aacute; Pasando?</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+		  <table style="width: 100%;">
+		  <tr>
+		  <td>
+		  <div class="form-group">
+            <label for="message-text" class="control-label"></label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+		  </td>
+		  </tr>
+		  </table>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="btnPublicarTweet" type="button" class="btn btn-primary" data-dismiss="modal">Tweet</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="modal fade" id="modalConfirmPublicar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1867,7 +1897,10 @@ tasFrHa1q10tYLWrXe1qVwtY7WpXu9p1Juv/HwCf4lGIeNm3hQAAAABJRU5ErkJggg==" alt="" wid
 			window.location.replace("inicial.html");
 		});
 		$("#popTwitter").on("click", function() {
-		   $('#imagemodal').modal('show');
+		   $('#imagemodalTweet').modal('show');
+		});
+		$("#btnPublicarTweet").on("click", function() {
+		   $('#modalConfirmPublicar').modal('show');
 		});
 		
 	</script>
