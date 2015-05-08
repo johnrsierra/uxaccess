@@ -67,6 +67,46 @@ map "/feedback.html" do
 }
 end
 
+map "/points.html" do
+  run lambda { |env|
+  [
+    200, 
+    {
+      'Content-Type'  => 'text/html', 
+      'Cache-Control' => 'public, max-age=86400' 
+    },
+    File.open('public/points.html', File::RDONLY)
+  ]
+}
+end
+
+map "/ranking.html" do
+  run lambda { |env|
+  [
+    200, 
+    {
+      'Content-Type'  => 'text/html', 
+      'Cache-Control' => 'public, max-age=86400' 
+    },
+    File.open('public/ranking.html', File::RDONLY)
+  ]
+}
+end
+
+map "/social.html" do
+  run lambda { |env|
+  [
+    200, 
+    {
+      'Content-Type'  => 'text/html', 
+      'Cache-Control' => 'public, max-age=86400' 
+    },
+    File.open('public/social.html', File::RDONLY)
+  ]
+}
+end
+
+
 map "/survey.html" do
   run lambda { |env|
   [
